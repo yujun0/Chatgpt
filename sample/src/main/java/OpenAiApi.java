@@ -16,7 +16,7 @@ public class OpenAiApi {
         var scanner = new Scanner(System.in);
         System.out.println("請輸入要問的事情：");
         String prompt = scanner.nextLine();
-        System.out.println("請輸入回答創意程度(0(保守/實際)~1(創新/無序)：");
+        System.out.println("請輸入回答創意程度 0(保守/實際) ~ 1(創新/無序)：");
         double temperature = scanner.nextDouble();
         // 這邊輸入自己的token
         String apiKey = "YOUR_TOKEN";
@@ -37,8 +37,7 @@ public class OpenAiApi {
 
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         String jsonStr = response.body();
-        System.out.println(jsonStr);
-
+        System.out.println("response：" + jsonStr + "============================================================================");
         var gson = new Gson();
         var jsonObject = gson.fromJson(jsonStr, JsonObject.class);
 
