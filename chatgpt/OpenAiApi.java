@@ -19,7 +19,7 @@ public class OpenAiApi {
         System.out.println("請輸入回答創意程度 0(保守/實際) ~ 1(創新/無序)：");
         double temperature = scanner.nextDouble();
         // 這邊輸入自己的token
-        String apiKey = "YOUR_TOKEN";
+        String apiKey = "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";
         String apiUrl = "https://api.openai.com/v1/completions";
 
         var httpClient = HttpClient.newHttpClient();
